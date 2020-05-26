@@ -1,0 +1,20 @@
+@startmindmap MindMapMarkdown
+
+title Mind Map With Markdown Syntax
+
+* Item
+	* Sub item
+	* Another sub item
+		* Sub sub item
+
+left side
+
+	* left side sub item
+		* Another left side sub item
+			* left side sub sub item
+
+right side
+
+		* Another right side item
+
+@endmindmap
