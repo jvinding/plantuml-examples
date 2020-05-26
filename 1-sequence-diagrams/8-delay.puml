@@ -1,6 +1,6 @@
-@startuml SequenceDiagramWithNotes
+@startuml SequenceDiagramWithDelay
 
-title Sequence With Notes
+title Sequence With Delay
 
 box Box 1
     actor "Actor 1" as actor_1
@@ -20,6 +20,9 @@ note left : This is a note
 deactivate actor_1
 participant_1 ->> participant_2 ++ : Do 1st thing (async)
 deactivate participant_1
+
+...Some Time Passes...
+
 participant_2 -->> participant_3 ++ : Do 2nd thing (async and dashed)
 note right
   This is a long note
@@ -32,7 +35,8 @@ return Something
 deactivate participant_3
 
 ' NOTES:
-' left vs right
-' - multiline
+' - activate vs ++
+' - deactivate
+' - return
 
 @enduml
