@@ -1,0 +1,20 @@
+@startuml SequenceDiagramWithAs
+
+title Sequence With "as"
+
+actor "Actor 1" as actor_1
+participant "Participant 1" as participant_1
+participant "Participant 2" as participant_2
+participant "Participant 3" as participant_3
+participant "Participant 4" as participant_4
+
+actor_1 -> participant_1
+participant_1 -> participant_2
+participant_2 -> participant_3
+participant_3 -> participant_4
+participant_3 <- participant_4
+
+' NOTES:
+' - No labels
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml SequenceDiagramWithLabels
+
+title Sequence With Labels
+
+actor "Actor 1" as actor_1
+participant "Participant 1" as participant_1
+participant "Participant 2" as participant_2
+participant "Participant 3" as participant_3
+participant "Participant 4" as participant_4
+
+actor_1 -> participant_1 : Start it off
+participant_1 -> participant_2 : Do 1st thing
+participant_2 -> participant_3 : Do 2nd thing
+participant_3 -> participant_4 : Ask for "something"
+participant_3 <- participant_4 : Something
+
+' NOTES:
+' - No lifeline
+
+@enduml

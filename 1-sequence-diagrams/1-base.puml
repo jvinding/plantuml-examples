@@ -1,0 +1,16 @@
+@startuml SequenceDiagramBase
+
+title Base Sequence Diagram
+
+Actor_1 -> "Participant 1"
+"Participant 1" -> "Participant 2"
+"Participant 2" -> "Participant 3"
+"Participant 3" -> "Participant 4"
+"Participant 3" <- "Participant 4"
+
+' NOTES:
+' - Spaces must be in quotes
+' - No "actor" symbol
+' - Modifying a name requires changes to every affected line
+
+@enduml

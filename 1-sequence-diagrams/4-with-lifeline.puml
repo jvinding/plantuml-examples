@@ -1,0 +1,28 @@
+@startuml SequenceDiagramWithLifeLines
+
+title Sequence With Life Lines
+
+actor "Actor 1" as actor_1
+participant "Participant 1" as participant_1
+participant "Participant 2" as participant_2
+participant "Participant 3" as participant_3
+participant "Participant 4" as participant_4
+
+activate actor_1
+actor_1 -> participant_1 ++ : Start it off
+deactivate actor_1
+participant_1 -> participant_2 ++ : Do 1st thing
+deactivate participant_1
+participant_2 -> participant_3 ++ : Do 2nd thing
+deactivate participant_2
+participant_3 -> participant_4 ++ : Ask for "something"
+return Something
+deactivate participant_3
+
+' NOTES:
+' - activate vs ++
+' - deactivate
+' - return
+' - return line is dashed
+
+@enduml
