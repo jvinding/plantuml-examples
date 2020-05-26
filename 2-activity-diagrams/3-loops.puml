@@ -1,0 +1,17 @@
+@startuml ActivityWithLoops
+
+title Activity Diagram With Loops
+
+start
+
+repeat :Do something repeatedly;
+    :Step 1;
+    :Step 2;
+repeat while (Are we done yet?) is (no)
+->yes;
+
+:Step 3;
+
+stop
+
+@enduml

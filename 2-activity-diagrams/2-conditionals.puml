@@ -1,0 +1,23 @@
+@startuml ActivityWithConditionals
+
+title Activity Diagram With Conditional
+
+start
+
+:Step 1;
+
+if (Something good happens) then (yes)
+    :Do good stuff;
+else if (Something mediocre happens) then (yes)
+    :Do mediocre stuff;
+else (Something bad happens)
+    :Do bad stuff;
+endif
+
+:Step 3;
+
+stop
+
+' NOTES:
+' - Loops
+@enduml
