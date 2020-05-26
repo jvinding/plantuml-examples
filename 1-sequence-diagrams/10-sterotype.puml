@@ -1,0 +1,35 @@
+@startuml SequenceDiagramWithStyles
+!include ../styles/sequence.puml
+
+title Sequence With Styles
+
+box Box 1
+    actor "Actor 1" as actor_1
+    participant "Participant 1" as participant_1
+end box
+
+box Box 2
+    participant "Participant 2" as participant_2 <<external_system>>
+    participant "Participant 3" as participant_3 <<external_system>>
+    participant "Participant 4" as participant_4 <<external_system>>
+end box
+
+activate actor_1
+actor_1 --> participant_1 ++ : Start it off
+note left : This is a note
+
+deactivate actor_1
+participant_1 ->> participant_2 ++ : Do 1st thing (async)
+deactivate participant_1
+participant_2 -->> participant_3 ++ : Do 2nd thing (async and dashed)
+note right
+  This is a long note
+  with multiple lines
+end note
+
+deactivate participant_2
+participant_3 -> participant_4 ++ : Ask for "something"
+return Something
+deactivate participant_3
+
+@enduml
