@@ -1,7 +1,13 @@
-@startuml SequenceDiagramWithStereoTypes
+@startuml SequenceDiagramWithLegend
 !include ../styles/sequence.puml
 
-title Sequence With StereoTypes
+legend right
+|= color |= type |
+|<COLOR_FILL> | Internal System |
+|<COLOR_FILL_EXTERNAL> | External System |
+end legend
+
+title Sequence With Legend
 
 box Box 1
     actor "Actor 1" as actor_1
