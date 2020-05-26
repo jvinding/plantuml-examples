@@ -1,0 +1,13 @@
+@startmindmap MindMapAltSyntax
+
+title Mind Map With Alternate Syntax
+
++ Item
+++ Sub item
+++ Another sub item
++++ Sub sub item
+-- left side sub item
+-- Another left side sub item
+--- left side sub sub item
+
+@endmindmap

@@ -1,0 +1,10 @@
+@startmindmap MindMapBase
+
+title Base Mind Map
+
+* Item
+** Sub item
+** Another sub item
+*** Sub sub item
+
+@endmindmap

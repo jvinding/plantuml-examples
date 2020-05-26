@@ -1,0 +1,19 @@
+@startmindmap MindMapLeftSide
+
+title Mind Map With Removed Boxes
+
+* Item
+** Sub item
+**:Multiline
+sub item;
+*** Sub sub item
+
+left side
+
+**_ left side sub item
+**_ Another left side sub item
+***_ left side sub sub item
+
+' NOTES:
+' - no space before :
+@endmindmap

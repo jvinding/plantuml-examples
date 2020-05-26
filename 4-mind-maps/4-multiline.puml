@@ -1,0 +1,19 @@
+@startmindmap MindMapMultilineItem
+
+title Mind Map With Multiline Item
+
+* Item
+** Sub item
+**:Multiline
+sub item;
+*** Sub sub item
+
+left side
+
+** left side sub item
+** Another left side sub item
+*** left side sub sub item
+
+' NOTES:
+' - no space before :
+@endmindmap

@@ -1,0 +1,16 @@
+@startmindmap MindMapLeftSide
+
+title Mind Map With Left Side
+
+* Item
+** Sub item
+** Another sub item
+*** Sub sub item
+
+left side
+
+** left side sub item
+** Another left side sub item
+*** left side sub sub item
+
+@endmindmap
