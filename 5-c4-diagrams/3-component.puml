@@ -1,0 +1,34 @@
+@startuml C4Component
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Component.puml
+
+title Component Diagram
+
+Container(ui, "Front-end", "Angular")
+Container(microservice_b, "Microservice B", "Handles all 'B' related functionality")
+Container(microservice_c, "Microservice C", "Handles all 'C' related functionality")
+
+ComponentDb(db_a, "A DB", "PostgreSQL", "Stores all As and Bs")
+
+Boundary(input_adapters_boundary, "Microservice A") {
+    Component(resource_a_controller, "Resource A Controller", "Spring Boot RestController")
+    Rel(ui, resource_a_controller, "Calls to do 'A' things", "HTTPS/JSON")
+    Component(resource_a_service, "Resource A Service", "Spring Boot Service")
+    Rel(resource_a_controller, resource_a_service, "uses")
+    Rel(resource_a_service, db_a, "Reads/Writes", "jdbc")
+
+    Component(resource_b_controller, "Resource B Controller", "Spring Boot RestController")
+    Rel(microservice_b, resource_b_controller, "Calls to do 'B' things", "grpc")
+    Component(resource_b_service, "Resource B Service", "Spring Boot Service")
+    Rel(resource_b_controller, resource_b_service, "uses")
+    Rel(resource_b_service, db_a, "Reads/Writes", "jdbc")
+
+    Component(resource_c_service, "Resource C Service", "Spring Boot Service")
+    Rel(resource_a_service, resource_c_service, "uses")
+    Rel(resource_c_service, microservice_c, "Calls to do 'C' things", "grpc")
+}
+
+' NOTES:
+' - Interactions with external systems mapped out
+' - Not a class diagram
+
+@enduml

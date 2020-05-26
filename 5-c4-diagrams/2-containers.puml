@@ -1,0 +1,41 @@
+@startuml C4Container
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+
+System_Ext(external_system, "External System", "Description of that external system")
+
+Person(a_person, "Person", "This is a person who uses my system")
+' Rel(a_person, my_system, "Interactions")
+
+System_Ext(another_external_system, "Another External System")
+' Rel(another_external_system, my_system, "Fetch Content")
+
+Container_Boundary(my_system_boundary, "My System") {
+    Container(ui, "Front-end", "Angular")
+    Rel(a_person, ui, "Things that users do", "HTTPS")
+
+    Container(service_a, "Microservice A", "Handles all 'A' related functionality")
+    ContainerDb(db_a, "Microservice A DB", "PostgreSQL", "Microservice A's data")
+    Rel(service_a, db_a, "Read & write", "jdbc")
+
+    Rel(ui, service_a, "Interact with A", "HTTPS/JSON")
+
+    Container(service_b, "Microservice B", "Handles all 'B' related functionality")
+    ContainerDb(db_b, "Microservice B DB", "PostgreSQL", "Microservice B's data")
+    Rel(service_b, db_b, "Read & write", "jdbc")
+
+    Rel(service_a, service_b, "Perform B calls", "grpc")
+
+    Container(service_c, "Microservice C", "Handles all 'C' related functionality")
+    Rel(service_a, service_c, "Perform C calls", "grpc")
+}
+
+Rel(external_system, service_a, "Interact with A", "grpc")
+Rel(service_c, another_external_system, "Interact with A", "grpc")
+
+' NOTES:
+' - Container != Docker
+' - Technology choices
+' - External systems tied to specific containers
+' - End of high-level design
+
+@enduml
