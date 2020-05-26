@@ -15,13 +15,13 @@ participant_1 ->> participant_2 ++ : Do 1st thing (async)
 deactivate participant_1
 participant_2 -->> participant_3 ++ : Do 2nd thing (async and dashed)
 deactivate participant_2
-participant_3 -> participant_4 ++ : Ask for "something"
+participant_3 ->> participant_4 ++ : Ask for "something"
 return Something
 deactivate participant_3
 
 ' NOTES:
-' - activate vs ++
-' - deactivate
-' - return
+' - Async
+' - Dashed
+' - Return matches arrow head to origin call
 
 @enduml
