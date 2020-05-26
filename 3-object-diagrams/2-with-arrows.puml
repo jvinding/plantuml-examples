@@ -1,0 +1,31 @@
+@startuml ObjectWithArrows
+
+title Object Diagram With Arrows
+
+object "This is an object" as obj1 {
+    <<PK>> id : uuid
+    title : string
+}
+
+object "Object 2" as obj2 {
+    <<PK>> id : uuid
+}
+
+object "Object 3" as obj3 {
+    <<PK>> id : uuid
+}
+
+object "Object 4" as obj4 {
+    <<PK>> id : uuid
+}
+
+object "Object 5" as obj5 {
+    <<PK>> id : uuid
+}
+
+obj1 ||--|| obj2
+obj2 ||--|{ obj3
+obj3 ||--o{ obj4
+obj4 }o--o| obj5
+
+@enduml
