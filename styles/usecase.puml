@@ -1,0 +1,9 @@
+@startuml UsecaseStyles
+!include common.puml
+
+skinparam usecase {
+    FontName FONT_TEXT
+    FontColor COLOR_TEXT_LIGHT
+    BackgroundColor COLOR_FILL
+    BorderColor COLOR_BORDER
+}

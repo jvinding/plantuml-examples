@@ -1,0 +1,5 @@
+@startuml C4Styles
+!include common.puml
+
+skinparam FontName FONT_TEXT
+skinparam RectangleFontName "Helvetica"

@@ -1,0 +1,12 @@
+@startuml ObjectStyles
+!include common.puml
+
+skinparam object {
+    FontName FONT_TEXT
+    FontColor black
+    AttributeFontName FONT_TEXT
+    AttributeFontColor black
+    BackgroundColor white
+    BorderColor black
+}
+@enduml

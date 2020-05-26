@@ -1,0 +1,16 @@
+@startuml ObjectStyles
+!include common.puml
+' skinparam ObjectAttributeFontColor
+    ' skinparam ObjectFontName FONT_TEXT
+    ' skinparam ObjectFontColor COLOR_TEXT_LIGHT
+    ' skinparam ObjectBackgroundColor COLOR_FILL
+    ' skinparam ObjectBorderColor COLOR_BORDER
+skinparam class {
+    FontName FONT_TEXT
+    FontColor black
+    AttributeFontName FONT_TEXT
+    AttributeFontColor black
+    BackgroundColor white
+    BorderColor black
+}
+@enduml

@@ -1,0 +1,26 @@
+@startuml CommonStyles
+!define COLOR_TEXT_LIGHT #fff
+!define COLOR_TEXT_DARK #fff
+!define COLOR_FILL #438DD5
+!define COLOR_FILL_EXTERNAL #999
+!define COLOR_BORDER #3c7fc0
+!define COLOR_BORDER_EXTERNAL #8a8a8a
+' !define FONT_TEXT "Comic Sans MS"
+!define FONT_TEXT "Helvetica"
+
+skinparam TitleFontName FONT_TEXT
+skinparam RectangleFontName FONT_TEXT
+
+skinparam FontColor COLOR_TEXT_DARK
+skinparam shadowing false
+
+skinparam arrow {
+    FontName FONT_TEXT
+    Color #333
+}
+skinparam actor {
+    FontName FONT_TEXT
+    StereotypeFontName FONT_TEXT
+    BackgroundColor #white
+    BorderColor COLOR_FILL_EXTERNAL
+}

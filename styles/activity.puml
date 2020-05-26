@@ -1,0 +1,15 @@
+@startuml Styles
+!include common.puml
+
+skinparam activity {
+    FontColor COLOR_TEXT_LIGHT
+    DiamondFontColor COLOR_TEXT_LIGHT
+    FontName FONT_TEXT
+    DiamondFontName FONT_TEXT
+    FontSize 13
+    DiamondFontSize 13
+    BackgroundColor COLOR_FILL
+    DiamondBackgroundColor COLOR_FILL
+    BorderColor COLOR_BORDER
+    DiamondBorderColor COLOR_BORDER
+}

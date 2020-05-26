@@ -1,0 +1,58 @@
+@startuml SequenceStyles
+!include common.puml
+
+hide stereotype
+
+skinparam RoundCorner 10
+skinparam MaxMessageSize 100
+
+skinparam SequenceLifeLineBorderColor #333
+
+skinparam SequenceBoxBorderColor COLOR_BORDER_EXTERNAL
+skinparam SequenceBoxBackgroundColor #f3f3f3
+skinparam BoxPadding 10
+
+skinparam participant {
+    FontName FONT_TEXT
+    FontColor COLOR_TEXT_LIGHT
+    BackgroundColor COLOR_FILL
+    BorderColor COLOR_BORDER
+}
+skinparam participant<<external_system>> {
+    BackgroundColor COLOR_FILL_EXTERNAL
+    BorderColor COLOR_BORDER_EXTERNAL
+}
+skinparam queue {
+    FontName FONT_TEXT
+    FontColor COLOR_TEXT
+    BackgroundColor COLOR_FILL
+    BorderColor COLOR_BORDER
+}
+skinparam queue<<external_system>> {
+    FontColor COLOR_TEXT
+    BackgroundColor COLOR_FILL_EXTERNAL
+    BorderColor COLOR_BORDER_EXTERNAL
+}
+skinparam database {
+    BackgroundColor COLOR_FILL
+    BorderColor COLOR_BORDER
+}
+
+skinparam SequenceGroup {
+    FontName FONT_TEXT
+    BackgroundColor COLOR_FILL
+    BorderColor COLOR_BORDER
+    HeaderFontName FONT_TEXT
+    HeaderFontColor COLOR_FILL
+    HeaderFontColor COLOR_TEXT_LIGHT
+}
+skinparam SequenceReference {
+    FontName FONT_TEXT
+    BackgroundColor #fff
+    BorderColor COLOR_BORDER
+    HeaderBackgroundColor COLOR_FILL
+}
+
+skinparam SequenceDelay {
+    FontName FONT_TEXT
+}
