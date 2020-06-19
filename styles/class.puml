@@ -1,6 +1,8 @@
 @startuml ObjectStyles
 !include common.puml
 
+skinparam linetype ortho
+
 skinparam class {
     FontName FONT_TEXT
     FontColor black
