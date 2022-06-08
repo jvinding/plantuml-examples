@@ -5,8 +5,6 @@ title Activity Diagram With Everything
 
 start
 
-start
-
 repeat :Do something repeatedly;
     :Step 1;
     if (Something good happens) then (yes)
